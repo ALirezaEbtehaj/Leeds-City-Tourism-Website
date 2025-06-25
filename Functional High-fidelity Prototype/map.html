@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Leeds City</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="style/header.css" />
+	<link rel="stylesheet" href="style/map.css" />
+</head>
+<body>
+
+	<!-- Top header with logo, search bar, and user icons -->
+	<div class="container-fluid bg-light py-1">
+		<div class="row align-items-center">
+			<div class="col-md-3 d-flex align-items-center">
+				<img src="images/logo.png" alt="Leeds City website logo" style="width: 150px; height: auto;">
+			</div>
+			<div class="col-md-5 d-flex justify-content-center">
+				<form class="w-100" style="max-width: 600px;">
+					<div class="input-group input-group-sm">
+						<input type="text" class="form-control" placeholder="Search..." aria-label="Search">
+						<button class="btn btn-outline-secondary" type="submit" aria-label="Submit Search">
+							<img src="images/search-icon.png" alt="icon for search" width="16">
+						</button>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-4 d-flex justify-content-end align-items-center gap-3">
+				<button type="button" class="bell-btn" aria-label="Notifications" data-bs-toggle="tooltip" data-bs-placement="bottom" title="View notifications">
+					<img src="images/bell-icon.png" alt="Bell icon for notifications" width="20">
+				</button>
+				<a href="favourites.html" class="heart-btn" aria-label="Favorites" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Go to favourites">
+					<img src="images/heart-icon.png" alt="Heart icon to view favourites page" width="20">
+				</a>
+				<a href="login.html" class="user-btn justify-content-between" aria-label="User Profile" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Log out">
+					<img src="images/user-icon.png" alt="User profile icon" width="20">
+				</a>
+				<span style="font-size: 0.9rem;">Ali</span>
+			</div>
+		</div>
+	</div>
+
+	<!-- Navigation bar -->
+	<nav class="bg-white border-top border-bottom">
+		<div class="container">
+			<ul class="nav justify-content-center py-2">
+				<li class="nav-item"><a class="nav-link" href="index.html">Homepage</a></li>
+				<li class="nav-item"><a class="nav-link" href="calendar.html">Calendar</a></li>
+				<li class="nav-item"><a class="nav-link" href="favourites.html">Favourites</a></li>
+				<li class="nav-item"><a class="nav-link active" href="map.html">Map</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- Map Section -->
+	<section id="mapSection">
+		<!-- Left side panel -->
+		<div id="leftPanel justify-content-between">
+			<!-- Search box inside left panel -->
+			<div class="search-box">
+				<form>
+					<div class="input-group input-group-sm">
+						<input type="text" class="form-control" placeholder="Search...">
+						<button class="btn btn-outline-secondary" type="submit">
+							<img src="images/search-icon.png" alt="Small search icon" width="14" height="14">
+						</button>
+					</div>
+				</form>
+			</div>
+			<!-- Info panel shows place details -->
+			<div id="infoPanel">
+				<h5 id="infoName"></h5>
+				<img id="infoImg" src="" alt="Image of selected location">
+				<div class="text-center my-2">
+					<button class="info-heart-btn" id="favBtn" aria-label="Save to favourites">
+						<img id="heartIcon" src="images/heart-icon.png" alt="Heart icon to like or save this place">
+					</button>
+				</div>
+				<p><strong>Rating:</strong> <span id="infoRate"></span></p>
+				<p><strong>Address:</strong> <span id="infoAddress"></span></p>
+				<p><strong>Phone:</strong> <span id="infoPhone"></span></p>
+			</div>
+		</div>
+		<!-- Main map area -->
+		<div id="mapWrapper">
+			<!-- Category buttons above the map -->
+			<div class="map-overlay">
+				<div class="d-flex justify-content-center flex-wrap gap-2">
+					<button id="restaurantBtn" class="btn btn-outline-primary btn-sm">Restaurant</button>
+					<button id="parkBtn" class="btn btn-outline-primary btn-sm">Park</button>
+					<button id="museumBtn" class="btn btn-outline-primary btn-sm">Museum</button>
+					<button id="shoppingBtn" class="btn btn-outline-primary btn-sm">Shopping</button>
+					<button id="landmarkBtn" class="btn btn-outline-primary btn-sm">Landmark</button>
+				</div>
+			</div>
+			<!-- Google Maps iframe -->
+			<iframe id="mapIframe"
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9490.39540775816!2d-1.5585999!3d53.8007554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48795c2f0c3bdaeb%3A0x65b5e9159b832e2a!2sLeeds!5e0!3m2!1sen!2suk!4v1715168341539!5m2!1sen!2suk"
+				allowfullscreen=""
+				loading="lazy"
+				title="Embedded Google Map showing Leeds city center">
+			</iframe>
+		</div>
+	</section>
+
+	<!-- Footer section -->
+	<footer class="bg-dark text-white py-4 mt-5">
+		<div class="container-fluid px-4">
+			<div class="d-flex justify-content-between align-items-center flex-wrap">
+				<div class="text-start">
+					<h2 class="mb-2">Contact Details</h2>
+					<p class="mb-0">Email: something@gmail.com</p>
+					<p class="mb-0">Phone: 12445667</p>
+				</div>
+				<div class="d-flex gap-4">
+					<a href="#"><img src="images/whatsapp.png" alt="WhatsApp logo" width="40"></a>
+					<a href="#"><img src="images/instagram.png" alt="Instagram logo" width="40"></a>
+					<a href="#"><img src="images/telegram.png" alt="Telegram logo" width="40"></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- JavaScript -->
+	<script>
+		const iframe = document.getElementById("mapIframe");
+		const infoPanel = document.getElementById("infoPanel");
+		const infoName = document.getElementById("infoName");
+		const infoImg = document.getElementById("infoImg");
+		const infoRate = document.getElementById("infoRate");
+		const infoAddress = document.getElementById("infoAddress");
+		const infoPhone = document.getElementById("infoPhone");
+        // svaging all the datas of the places
+		const places = {
+			restaurant: {
+				map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37690.81402442641!2d-1.6067284119884493!3d53.813050991503786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48795d1c6ed05ddf%3A0x8e056eb8b758cf8e!2sOlive%20Tree%20Brasserie!5e0!3m2!1sen!2suk!4v1746808570456!5m2!1sen!2suk",
+				name: "Olive Tree Bistro",
+				img: "images/olive-tree.png",
+				rate: "★★★★★",
+				address: "8 S Parade, Leeds LS1 5QX",
+				phone: "01135133452"
+			},
+			park: {
+				map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2354.4359169021377!2d-1.4994507225465994!3d53.835110272435095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48795b0b0acc019f%3A0x58de428758fe0d6e!2sRoundhay%20Park!5e0!3m2!1sen!2suk!4v1746808763999!5m2!1sen!2suk",
+				name: "Roundhay Park",
+				img: "images/roundhay.png",
+				rate: "★★★★★",
+				address: "Mansion Ln, Roundhay, Leeds LS8 2HH",
+				phone: "01133786002"
+			},
+			museum: {
+				map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23918.727793158632!2d-1.5651936088991578!3d53.80596517997796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48795dcef2883d2d%3A0xaa280ef44ca944f7!2sMathsCity!5e0!3m2!1sen!2suk!4v1746809147995!5m2!1sen!2suk",
+				name: "MathCity",
+				img: "images/mathcity.png",
+				rate: "★★★★★",
+				address: "Upper Floor, Trinity, Shopping Centre, Leeds LS1 5AT",
+				phone: "07469195730"
+			},
+			shopping: {
+				map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14727.97948594596!2d-1.5467843593720711!3d53.80385935116904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48795c1ebada21b9%3A0x7e291386a3a95862!2sTrinity%20Leeds!5e0!3m2!1sen!2suk!4v1746809422530!5m2!1sen!2suk",
+				name: "Trinity Leeds",
+				img: "images/trinity.png",
+				rate: "★★★★☆",
+				address: "27 Albion St, Leeds LS1 5AT",
+				phone: "01133942415"
+			},
+			landmarks: {
+				map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15756.183923048573!2d-1.5624025409521296!3d53.79794748668391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48795ea16b7a5259%3A0x8024b280585a24fa!2sTower%20Square!5e0!3m2!1sen!2suk!4v1746809689125!5m2!1sen!2suk",
+				name: "Tower Square",
+				img: "images/tower.png",
+				rate: "★★★☆☆",
+				address: "1 Wellington Pl, Leeds LS1 4AG",
+				phone: "01133899830"
+			}
+		};
+
+        // retriving data
+		function showPlace(key) {
+			const place = places[key];
+			iframe.src = place.map;
+			infoName.textContent = place.name;
+			infoImg.src = place.img;
+			infoRate.textContent = place.rate;
+			infoAddress.textContent = place.address;
+			infoPhone.textContent = place.phone;
+			infoPanel.style.display = "block";
+		}
+        //shows the places when buttons are clicked 
+		document.getElementById("restaurantBtn").onclick = () => showPlace("restaurant");
+		document.getElementById("parkBtn").onclick = () => showPlace("park");
+		document.getElementById("museumBtn").onclick = () => showPlace("museum");
+		document.getElementById("shoppingBtn").onclick = () => showPlace("shopping");
+		document.getElementById("landmarkBtn").onclick = () => showPlace("landmarks");
+		document.addEventListener("DOMContentLoaded", () => {
+			const infoHeartBtn = document.querySelector(".info-heart-btn");
+			infoHeartBtn.addEventListener("click", () => {
+				infoHeartBtn.classList.toggle("liked");
+			});
+		});
+		const categoryButtons = document.querySelectorAll(".map-overlay .btn");
+		categoryButtons.forEach((btn) => {
+			btn.addEventListener("click", () => {
+				categoryButtons.forEach(b => b.classList.remove("active"));
+				btn.classList.add("active");
+			});
+		});
+	</script>
+</body>
+</html>

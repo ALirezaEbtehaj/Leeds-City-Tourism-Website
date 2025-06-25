@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Liked Places & Events</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style/header.css" />
+  <link rel="stylesheet" href="style/favourites.css" />
+</head>
+<body>
+
+  <!-- Top header with logo, search bar, and user icons -->
+	<div class="container-fluid bg-light py-1">
+		<div class="row align-items-center">
+			<div class="col-md-3 d-flex align-items-center">
+				<img src="images/logo.png" alt="Leeds City website logo" style="width: 150px; height: auto;">
+			</div>
+			<div class="col-md-5 d-flex justify-content-center">
+				<form class="w-100" style="max-width: 600px;">
+					<div class="input-group input-group-sm">
+						<input type="text" class="form-control" placeholder="Search..." aria-label="Search">
+						<button class="btn btn-outline-secondary" type="submit" aria-label="Submit Search">
+							<img src="images/search-icon.png" alt="icon for search" width="16">
+						</button>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-4 d-flex justify-content-end align-items-center gap-3">
+				<button type="button" class="bell-btn" aria-label="Notifications" data-bs-toggle="tooltip" data-bs-placement="bottom" title="View notifications">
+					<img src="images/bell-icon.png" alt="Bell icon for notifications" width="20">
+				</button>
+				<a href="favourites.html" class="heart-btn" aria-label="Favorites" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Go to favourites">
+					<img src="images/heart-icon.png" alt="Heart icon to view favourites page" width="20">
+				</a>
+				<a href="login.html" class="user-btn justify-content-between" aria-label="User Profile" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Log out">
+					<img src="images/user-icon.png" alt="User profile icon" width="20">
+				</a>
+				<span style="font-size: 0.9rem;">Ali</span>
+			</div>
+		</div>
+	</div>
+
+	<!-- Navigation bar -->
+	<nav class="bg-white border-top border-bottom">
+		<div class="container">
+			<ul class="nav justify-content-center py-2">
+				<li class="nav-item"><a class="nav-link" href="index.html">Homepage</a></li>
+				<li class="nav-item"><a class="nav-link" href="calendar.html">Calendar</a></li>
+				<li class="nav-item"><a class="nav-link active" href="favourites.html">Favourites</a></li>
+				<li class="nav-item"><a class="nav-link" href="map.html">Map</a></li>
+			</ul>
+		</div>
+	</nav>
+
+
+  <!-- Toggle View -->
+    <div class="container mb-5">
+        <div class="d-flex justify-content-end">
+        <div class="view-toggle nav">
+            <a href="favourites.html" class="nav-link " id="gridViewBtn">Grid</a>
+            <a href="favourites-map.html" class="nav-link active" id="mapViewBtn">Map</a>
+        </div>
+        </div>
+    </div>
+
+  <!-- Map and Info -->
+  <section id="mapSection">
+    
+
+    <!-- Left Panel -->
+    <div id="leftPanel  justify-content-between">
+      <!-- Search box -->
+      <div class="search-box">
+        <form>
+          <div class="input-group input-group-sm">
+            <input type="text" class="form-control" placeholder="Search...">
+            <button class="btn btn-outline-secondary" type="submit">
+              <img src="images/search-icon.png" alt="icon for search" width="14" height="14">
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Info Panel -->
+      <div id="infoPanel">
+        <h5 id="infoName"></h5>
+        <img id="infoImg" src="" alt="Place Image">
+
+        <div class="text-center my-2">
+            <button class="info-heart-btn liked" id="favBtn" aria-label="Save to favourites">
+              <img id="heartIcon" src="images/heart-icon.png" alt="Remove favourites">
+            </button>
+          </div>
+        
+        
+        
+        <p><strong>Rating:</strong> <span id="infoRate"></span></p>
+        <p><strong>Address:</strong> <span id="infoAddress"></span></p>
+        <p><strong>Phone:</strong> <span id="infoPhone"></span></p>
+      </div>
+    </div>
+
+    <!-- Map -->
+    <div id="mapWrapper">
+      </div>
+
+      <iframe id="mapIframe"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9490.39540775816!2d-1.5585999!3d53.8007554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48795c2f0c3bdaeb%3A0x65b5e9159b832e2a!2sLeeds!5e0!3m2!1sen!2suk!4v1715168341539!5m2!1sen!2suk"
+        allowfullscreen=""
+        loading="lazy"></iframe>
+    </div>
+  </section>  
+
+  
+  <!-- Contact Details -->
+  <footer class="bg-dark text-white py-4 mt-5">
+    <div class="container-fluid px-4">
+      <div class="d-flex justify-content-between align-items-center flex-wrap">
+  
+        <!-- Left: Contact Info -->
+        <div class="text-start">
+          <h2 class="mb-2">Contact Details</h2>
+          <p class="mb-0">Email: something@gmail.com</p>
+          <p class="mb-0">Phone: 12445667</p>
+        </div>
+  
+        <!-- Right: Social Icons -->
+        <div class="d-flex gap-4">
+          <a href="#"><img src="images/whatsapp.png" alt="WhatsApp" width="40"></a>
+          <a href="#"><img src="images/instagram.png" alt="Instagram" width="40"></a>
+          <a href="#"><img src="images/telegram.png" alt="Telegram" width="40"></a>
+        </div>
+  
+      </div>
+    </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/favourites.js"></script>
+  <script>
+  const iframe = document.getElementById("mapIframe");
+  const infoPanel = document.getElementById("infoPanel");
+  const infoName = document.getElementById("infoName");
+  const infoImg = document.getElementById("infoImg");
+  const infoRate = document.getElementById("infoRate");
+  const infoAddress = document.getElementById("infoAddress");
+  const infoPhone = document.getElementById("infoPhone");
+
+  const places = {
+    park: {
+      map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2354.4359169021377!2d-1.4994507225465994!3d53.835110272435095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48795b0b0acc019f%3A0x58de428758fe0d6e!2sRoundhay%20Park!5e0!3m2!1sen!2suk!4v1746808763999!5m2!1sen!2suk",
+      name: "Roundhay Park",
+      img: "images/roundhay.png",
+      rate: "★★★★★",
+      address: "Mansion Ln, Roundhay, Leeds LS8 2HH",
+      phone: "01133786002"
+    }
+  };
+
+  // Auto-show Park on page load
+  document.addEventListener("DOMContentLoaded", () => {
+    const park = places.park;
+    iframe.src = park.map;
+    infoName.textContent = park.name;
+    infoImg.src = park.img;
+    infoRate.textContent = park.rate;
+    infoAddress.textContent = park.address;
+    infoPhone.textContent = park.phone;
+    infoPanel.style.display = "block";
+
+    const infoHeartBtn = document.querySelector(".info-heart-btn");
+    infoHeartBtn.addEventListener("click", () => {
+      infoHeartBtn.classList.toggle("liked");
+    });
+  });
+</script>
+
+
+</body>
+</html>

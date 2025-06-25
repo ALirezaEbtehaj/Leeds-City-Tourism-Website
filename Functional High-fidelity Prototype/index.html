@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weekend City Break - Leeds</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style/header.css" />
+  <link rel="stylesheet" href="style/index.css" />
+</head>
+<body>
+    <!-- Top header with logo, search bar, and user icons -->
+	<div class="container-fluid bg-light py-1">
+		<div class="row align-items-center">
+			<div class="col-md-3 d-flex align-items-center">
+				<img src="images/logo.png" alt="Leeds City website logo" style="width: 150px; height: auto;">
+			</div>
+			<div class="col-md-5 d-flex justify-content-center">
+				<form class="w-100" style="max-width: 600px;">
+					<div class="input-group input-group-sm">
+						<input type="text" class="form-control" placeholder="Search..." aria-label="Search">
+						<button class="btn btn-outline-secondary" type="submit" aria-label="Submit Search">
+							<img src="images/search-icon.png" alt="icon for search" width="16">
+						</button>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-4 d-flex justify-content-end align-items-center gap-3">
+				<button type="button" class="bell-btn" aria-label="Notifications" data-bs-toggle="tooltip" data-bs-placement="bottom" title="View notifications">
+					<img src="images/bell-icon.png" alt="Bell icon for notifications" width="20">
+				</button>
+				<a href="favourites.html" class="heart-btn" aria-label="Favorites" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Go to favourites">
+					<img src="images/heart-icon.png" alt="Heart icon to view favourites page" width="20">
+				</a>
+				<a href="login.html" class="user-btn justify-content-between" aria-label="User Profile" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Log out">
+					<img src="images/user-icon.png" alt="User profile icon" width="20">
+				</a>
+				<span style="font-size: 0.9rem;">Ali</span>
+			</div>
+		</div>
+	</div>
+
+	<!-- Navigation bar -->
+	<nav class="bg-white border-top border-bottom">
+		<div class="container">
+			<ul class="nav justify-content-center py-2">
+				<li class="nav-item"><a class="nav-link active" href="index.html">Homepage</a></li>
+				<li class="nav-item"><a class="nav-link" href="calendar.html">Calendar</a></li>
+				<li class="nav-item"><a class="nav-link" href="favourites.html">Favourites</a></li>
+				<li class="nav-item"><a class="nav-link" href="map.html">Map</a></li>
+			</ul>
+		</div>
+	</nav>
+    
+    <!--Coming Events-->
+    <section class="container my-4" aria-label="Coming Events">
+        <h2 class="text-center mb-4">Coming Events</h2>
+        <div class="row">
+          
+          <!-- Event Card 1 -->
+          <div class="col-md-4 d-flex">
+            <div class="card event1-card text-white w-100">
+              <div class="card-body d-flex flex-column justify-content-between">
+                <!-- Always-visible info -->
+                <div>
+                  <h5 class="card-title">Leeds Food & Drink Festival</h5>
+                  <p class="card-text">Price: £20.00<br>Location: LS2 4 88S<br>Time: April 2</p>
+                </div>
+      
+                <!-- Extra details -->
+                <div class="extra-details mt-2">
+                  <p>This event includes live music, food trucks, and more surprises!</p>
+                </div>
+      
+                <!-- Favourite button -->
+                <button class="heart-btn mt-auto align-self-start" aria-label="Add to favourites">
+                    <img src="images/heart-icon.png" alt="Add to favourites" width="20">
+                </button>
+                   
+              </div>
+            </div>
+          </div>
+      
+          <!-- Event Card 2 -->
+          <div class="col-md-4 d-flex">
+            <div class="card event2-card text-white w-100">
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <h5 class="card-title">Millennium Square Summer Concert</h5>
+                  <p class="card-text">Price: £30.00<br>Location: LS2 8 95V<br>Time: May 5–7</p>
+                </div>
+                <div class="extra-details mt-2">
+                  <p>Includes art galleries, live poetry, and food & drink tastings.</p>
+                </div>
+                <button class="heart-btn mt-auto align-self-start" aria-label="Add to favourites">
+                    <img src="images/heart-icon.png" alt="Add to favourites" width="20">
+                </button>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Event Card 3 -->
+          <div class="col-md-4 d-flex">
+            <div class="card event3-card text-white w-100">
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <h5 class="card-title">Roundhay Park Fireworks Show</h5>
+                  <p class="card-text">Price: £60.00<br>Location: LS9 3 8HG<br>Time: March 3</p>
+                </div>
+                <div class="extra-details mt-2">
+                  <p>Expect fireworks, DJs, carnival rides, and outdoor cinema!</p>
+                </div>
+                <button class="heart-btn mt-auto align-self-start" aria-label="Add to favourites">
+                    <img src="images/heart-icon.png" alt="Add to favourites" width="20">
+                </button>  
+              </div>
+            </div>
+          </div>
+      
+        </div>
+    </section>
+
+    
+    <!-- video and text section-->
+    <section class="scroll-lock-section">
+        <div class="content-wrapper">
+      
+          <!-- Left Video  -->
+          <div class="video-box animate-slide-in-left">
+            <div class="video-frame-container">
+              <h4 class="video-title">Leeds City Centre</h4>
+              <iframe 
+              src="https://www.youtube.com/embed/wrU1MbXpZn0?autoplay=1&mute=1&rel=0"
+              alr="a vidoe of city cneter of leeds"
+              title="Leeds city center video"
+              allow="autoplay; encrypted-media"
+              loading="lazy"
+              frameborder="0"
+              allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+      
+          <!-- Right Text -->
+          <div class="text-box animate-slide-in-right">   
+            <h2 class="section-heading">Why Leeds?</h2>
+            <div class="text-scroll" id="scrollText">
+                
+                <h3 class="fade-paragraph">Leeds</h3>  
+                  <p class="fade-paragraph">
+                    Leeds is a city in West Yorkshire, England. It is the largest settlement in Yorkshire and the administrative centre of the City of Leeds Metropolitan Borough, which is the second most populous district in the United Kingdom. It is built around the River Aire and is in the eastern foothills of the Pennines. The city was a small manorial borough in the 13th century and a market town in the 16th century. It expanded by becoming a major production and trading centre (mainly with wool) in the 17th and 18th centuries.
+                    Leeds developed as a mill town during the Industrial Revolution alongside other surrounding villages and towns in the West Riding of Yorkshire. It was also known for its flax industry, iron foundries, engineering and printing, as well as shopping, with several surviving Victorian era arcades, such as Kirkgate Market.City status was awarded in 1893, and a populous urban centre formed in the following century which absorbed surrounding villages and overtook the population of nearby York.
+   
+                    Leeds' economy is the most diverse of all the UK's main employment centres, has seen the fastest rate of private-sector jobs growth of any UK city and has the highest ratio of private to public sector jobs. Leeds is home to over 109,000 companies, generating 5% of England's total economic output of £60.5 billion, and is also ranked as a high sufficiency city by the Globalization and World Cities Research Network.[8] Leeds is considered the cultural, financial and commercial heart of the West Yorkshire Urban Area.
+                    
+                  </p>
+                <h3 class="fade-paragraph">History</h3>  
+
+                  <p class="fade-paragraph">
+                    The name derives from the old Brittonic *Lātēnses (via Late Brittonic Lādēses), composed of the Celtic root *lāt- "violent, boiling" and the borrowed Latin plural derivational suffix -ēnses, meaning "people of the fast-flowing river", in reference to the River Aire that flows through the city. This name originally referred to the forested area covering most of the Brittonic kingdom of Elmet, which existed during the 5th century into the early 7th century.
+
+                    Bede states in the fourteenth chapter of his Ecclesiastical History, in a discussion of an altar surviving from a church erected by Edwin of Northumbria, that it is located in ...regione quae vocatur Loidis (Latin, "the region which is called Loidis"). An inhabitant of Leeds is locally known as a Loiner, a word of uncertain origin. The term Leodensian is also used, from the city's Latin name.
+                  </p>
+                <h3 class="fade-paragraph">Economic development</h3>
+                  <p class="fade-paragraph"> 
+                    cLeeds developed as a market town in the Middle Ages as part of the local agricultural economy.
+                    Before the Industrial Revolution, it became a co-ordination centre for the manufacture of woollen cloth, and white broadcloth was traded at its White Cloth Hall.Leeds handled one sixth of England's export trade in 1770. Growth, initially in textiles, was accelerated by the creation of the Aire and Calder Navigation in 1699 (with major additional works in the 18th century) and the Leeds and Liverpool Canal in 1816.
+                    In the late Georgian era, William Lupton was one of a number of central Leeds landowners, some of whom, like him, were also textile manufacturers. At the time of his death in 1828, Lupton occupied the enclosed fields of the manor of Leeds, his estate including a mill, reservoir, substantial house and outbuildings.
+                  </p>                       
+            </div>
+          </div>
+        </div>
+    </section>
+      
+
+      
+    <!--popular events -->
+    <section class="container my-4" aria-label="Top Attractions">
+        <h3 class="text-center mb-4">Top Attraction Places</h3>
+        <div class="row g-4">
+      
+          <!-- Place 1 -->
+          <div class="col-md-3 d-flex">
+            <div class="card attraction-card place1 text-white w-100">
+              <div class="card-body text-star d-flex flex-column justify-content-between">
+                <div>
+                  <h5 class="card-title">Leeds art gallery</h5>
+                  <p class="card-text">
+                    Location: LS7<br>
+                    <span class="stars">★★★★☆</span>
+                  </p>
+                </div>
+                <button class="btn btn-outline-light mt-auto align-self-start heart-btn" aria-label="Add Place 1 to favourites">
+                  <img src="images/heart-icon.png" alt="Add to favourites" width="20">
+                </button>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Place 2 -->
+          <div class="col-md-3 d-flex">
+            <div class="card attraction-card place2 text-white w-100">
+              <div class="card-body text-start d-flex flex-column justify-content-between">
+                <div>
+                  <h5 class="card-title">Ledds shooping</h5>
+                  <p class="card-text">
+                    Location: LS3<br>
+                    <span class="stars">★★★☆☆</span>
+                  </p>
+                </div>
+                <button class="btn btn-outline-light mt-auto align-self-start heart-btn" aria-label="Add Place 2 to favourites">
+                  <img src="images/heart-icon.png" alt="Add to favourites" width="20">
+                </button>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Place 3 -->
+          <div class="col-md-3 d-flex">
+            <div class="card attraction-card place3 text-white w-100">
+              <div class="card-body text-start d-flex flex-column justify-content-between">
+                <div>
+                  <h5 class="card-title">University of Leeds</h5>
+                  <p class="card-text">
+                    Location: LS10<br>
+                    <span class="stars">★★★★☆</span>
+                  </p>
+                </div>
+                <button class="btn btn-outline-light mt-auto align-self-start heart-btn" aria-label="Add Place 3 to favourites">
+                  <img src="images/heart-icon.png" alt="Add to favourites" width="20">
+                </button>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Place 4 -->
+          <div class="col-md-3 d-flex">
+            <div class="card attraction-card place4 text-white w-100">
+              <div class="card-body text-start d-flex flex-column justify-content-between">
+                <div>
+                  <h5 class="card-title">Roundhay park</h5>
+                  <p class="card-text">
+                    Location: LS6<br>
+                    <span class="stars">★★★★★</span>
+                  </p>
+                </div>
+                <button class="btn btn-outline-light mt-auto align-self-start heart-btn" aria-label="Add Place 4 to favourites">
+                  <img src="images/heart-icon.png" alt="Add to favourites" width="20">
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+    <!-- Footer section -->
+	<footer class="bg-dark text-white py-4 mt-5">
+		<div class="container-fluid px-4">
+			<div class="d-flex justify-content-between align-items-center flex-wrap">
+				<div class="text-start">
+					<h2 class="mb-2">Contact Details</h2>
+					<p class="mb-0">Email: something@gmail.com</p>
+					<p class="mb-0">Phone: 12445667</p>
+				</div>
+				<div class="d-flex gap-4">
+					<a href="#"><img src="images/whatsapp.png" alt="WhatsApp logo" width="40"></a>
+					<a href="#"><img src="images/instagram.png" alt="Instagram logo" width="40"></a>
+					<a href="#"><img src="images/telegram.png" alt="Telegram logo" width="40"></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>  
+    <script src="js/index.js"></script>
+</body>
+
+</html>

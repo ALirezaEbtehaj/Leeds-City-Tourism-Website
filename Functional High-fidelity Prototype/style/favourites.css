@@ -1,0 +1,279 @@
+/* Search Button  */
+.custom-search .btn {
+    border-radius: 0 10px 10px 0;
+    border: 1px solid #ccc;
+    background-color: #f8f9fa;
+    padding: 6px 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+
+.custom-search .btn:hover {
+    background-color: #e2e6ea;
+  }
+
+/* Separator Line */
+hr {
+    border: none;
+    height: 2px;
+    background-color: #007bff;
+    opacity: 0.3;
+    border-radius: 4px;
+  }
+  
+/* Cards*/
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+/* Card Hover */
+.card:hover {
+    transform: scale(1.03) translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  }
+  
+/* Background Event Images */
+.event1-card, .event2-card, .event3-card, .event4-card, .event5-card, .event6-card, .event7-card, .event8-card, .place1-card, .place2-card , .place3-card {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 300px;
+    border-radius: 10px;
+  }
+  
+.event1-card { background-image: url("../images/event1.png"); }
+.event2-card { background-image: url("../images/event2.png"); }
+.event3-card { background-image: url("../images/event3.jpeg"); }
+.event4-card { background-image: url("../images/roundhay.png"); }
+.event5-card { background-image: url("../images/event5.png"); }
+.event6-card { background-image: url("../images/event6.png"); }
+.event7-card { background-image: url("../images/event7.png"); }
+.event8-card { background-image: url("../images/event8.png"); }
+.place1-card { background-image: url("../images/place1.jpeg"); }
+.place2-card { background-image: url("../images/place2.png"); }
+.place3-card { background-image: url("../images/place3.png"); }
+  
+/* Dark bakgorund color*/
+  .event1-card::before,
+  .event2-card::before,
+  .event3-card::before,
+  .event4-card::before,
+  .event5-card::before,
+  .event6-card::before,
+  .event7-card::before,
+  .event8-card::before,
+  .place1-card::before,
+  .place2-card::before,
+  .place3-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+    z-index: 0;
+  }
+  
+  /* Lighten overlay */
+  .event1-card:hover::before,
+  .event2-card:hover::before,
+  .event3-card:hover::before,
+  .event4-card:hover::before,
+  .event5-card:hover::before,
+  .event6-card:hover::before,
+  .event7-card:hover::before,
+  .event8-card:hover::before,
+  .place1-card:hover::before,
+  .place2-card:hover::before, 
+  .place3-card:hover::before{
+    background-color: rgba(0, 0, 0, 0.35);
+  }
+  
+/* Ensure card text is above the overlay */
+.card-body {
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+  }
+  
+/* Heart Button */
+.heart-btn {
+    border: 2px solid #dc3545;
+    background-color: transparent;
+    padding: 4px;
+    border-radius: 6px;
+    transition: 0.3s;
+  }
+  
+.heart-btn img {
+    transition: filter 0.3s ease;
+  }
+  
+/* heart btn Hover */
+.heart-btn:hover {
+    background-color: #dc3545;
+    border-color: #bb2d3b;
+  }
+  
+.heart-btn:hover img {
+    filter: brightness(0) invert(1);
+  }
+  
+/* When Liked */
+.heart-btn.liked {
+    background-color: #dc3545;
+    border-color: #bb2d3b;
+  }
+  
+.heart-btn.liked img {
+    filter: brightness(0) invert(1);
+  }
+  
+.heart-btn.liked:hover {
+    background-color: #bb2d3b;
+    border-color: #a71d2a;
+  }
+  
+/* Reveal Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+  }
+  
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+.view-toggle .nav-link {
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 6px 12px;
+  }
+
+#mapSection {
+    display: flex;
+    height: 80vh;
+  }
+
+ #leftPanel { 
+    width: 300px;
+    background: transparent;         
+    border-right: none;              
+    overflow-y: auto;
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.3);  
+    z-index: 2;
+    position: relative;
+  }
+
+#leftPanel .search-box {
+    margin-bottom: 20px;
+    background: transparent;
+  }
+
+#leftPanel img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+
+#infoPanel {
+  display: none;
+    margin: 0 15px 15px 15px;
+    background: #eeeeee;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    
+  }
+
+#infoRate {
+color: #dfcb12;
+font-size: 1.1rem;
+  }
+
+
+.info-heart-btn {
+ border: 2px solid #dc3545;
+ background-color: transparent;
+ padding: 6px;
+ border-radius: 8px;
+ transition: 0.3s;
+ float: right;             
+ margin-top: -3px;         
+}
+
+.info-heart-btn {
+  border: 2px solid #dc3545;
+  background-color: transparent;
+  padding: 4px;
+  border-radius: 6px;
+  transition: 0.3s;
+  float: right;             
+  margin-top: -6px;
+  transition: background-color 0.3s ease, border-color 0.3s ease; 
+  }
+
+.info-heart-btn:hover {
+  background-color: #dc3545;
+  border-color: #bb2d3b;
+  }
+
+  info-heart-btn:hover img {
+  filter: brightness(0) invert(1);
+  }
+
+.info-heart-btn img {
+  width: 25px;   
+  height: 20px;
+  }
+
+.info-heart-btn.liked {
+background-color: #dc3545;
+border-color: #bb2d3b;
+}
+
+.info-heart-btn.liked img {
+filter: brightness(0) invert(1);
+}
+
+.info-heart-btn.liked:hover {
+background-color: #bb2d3b;
+border-color: #a71d2a;
+}
+
+.info-heart-btn img {
+transition: filter 0.3s ease;
+}
+
+.info-heart-btn.liked img {
+filter: brightness(0) invert(1);
+}
+
+#mapWrapper {
+    flex-grow: 1;
+    position: relative;
+  }
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+.map-overlay {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 600px;
+    z-index: 10;
+
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }

@@ -1,0 +1,29 @@
+/* css/style.css */
+
+body {
+
+  background-image: url("../images/leeds.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.3); /* Semi-transparent */
+  backdrop-filter: blur(10px);          /* The actual blur effect */
+  -webkit-backdrop-filter: blur(10px);  /* Safari support */
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+h2 {
+  color: #333;
+}
+.custom-login-btn{
+  background-color:  #5cb85c;
+}
+.custom-login-btn:hover{
+  background-color: rgb(19, 125, 19);
+}
